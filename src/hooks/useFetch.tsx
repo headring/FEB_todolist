@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
+import { List } from '../comp/Lists';
 
-const useFetch = (url:string) => {
+type FetchData = [
+  data: List[] | null,
+  isPending: boolean | null,
+  error: string | null
+]
+const useFetch = (url:string):FetchData => {
   /* useState를 이용하여 data, isPending, error를 정의하세요. */
-  type FetchData ={
-    data: string[];
-    isPending: boolean;
-    error: string | boolean;
-  }
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
