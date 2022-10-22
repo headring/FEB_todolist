@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
-import { List } from '../comp/Lists';
+
+export interface Data{
+  id: number;
+  title: string;
+  contents: string;
+}
 
 type FetchData = [
-  data: List[] | null,
+  data: Data[] | null,
   isPending: boolean | null,
   error: string | null
 ]
