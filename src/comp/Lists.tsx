@@ -1,4 +1,4 @@
-import useFetch, { Data } from "../hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 import List from "./List";
 
 // 노마드 리액트 유료강의 TS
@@ -6,13 +6,7 @@ import List from "./List";
 const Lists = () => {
   const [data, isPending, error] = useFetch("http://localhost:4000/list/");
 
-
-  return(
-    <>
-      <List data={data} isPending={isPending}/>
-    </>
-  )
-
-}
+  return <>{error ? "failed" : <List data={data} isPending={isPending} />}</>;
+};
 
 export default Lists;
