@@ -1,5 +1,7 @@
 ###
 
+UI 참고: https://react.vlpt.us/mashup-todolist/
+
 ---
 
 폴더 구조 참고: https://sennieworld.tistory.com/67
